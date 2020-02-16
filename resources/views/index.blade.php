@@ -1,5 +1,13 @@
 @extends('layouts.master')
 
+@section('header')
+@include('components.header')
+@endsection
+
+@section('search')
+@include('components.search', ['airports' => $airports])
+@endsection
+
 @section('content')
     <div class="container mt-3">
         <h2>Nuestros destinos más populares</h2>

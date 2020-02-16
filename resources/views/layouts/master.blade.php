@@ -8,18 +8,19 @@
     <title>Braintly Viajes</title>
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
-@include('components.header')
+    @yield('header')
+    @yield('search')
+    @yield('content')
 
-@yield('content')
-
-<footer>
-    <div>#BraintlyViajes {{ now()->year }}</div>
-</footer>
-
+    <footer>
+        <div>#BraintlyViajes {{ now()->year }}</div>
+    </footer>
 </body>
 
 <script src="{{ asset('js/jquery.min.js') }}"></script>
 <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+@yield('scripts')
 </html>

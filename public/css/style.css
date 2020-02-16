@@ -45,3 +45,7 @@ footer {
     border-radius: 0;
     border: 0;
 }
+
+.icon.reservation {
+    cursor: pointer;
+}

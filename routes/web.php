@@ -11,4 +11,9 @@
 |
 */
 
-Route::get('/', 'IndexController@index');
+Route::get('/', 'IndexController@index')->name('index');
+Route::get('flights/search-by-airport', 'FlightController@searchByAirport')->name('flights.search-by-airport');
+Route::get('flights/search', 'FlightController@search')->name('flights.search');
+Route::resource('flights', 'FlightController');
+Route::get('reservations/check/', 'ReservationController@checkAvailability');
+Route::resource('reservations', 'ReservationController');
